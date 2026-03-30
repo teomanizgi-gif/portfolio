@@ -711,7 +711,7 @@ html {
 }
 
 /* =========================
-   FINAL MOBILE (CLEAN & SAFE)
+   FINAL MOBILE (PREMIUM NAV)
    desktop'a dokunmaz
 ========================= */
 
@@ -719,28 +719,37 @@ html {
 
   /* NAV */
   nav {
-    padding: 12px 15px;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
   }
 
   nav ul {
     display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
+    flex-wrap: wrap;                 /* ❌ scroll yok */
+    justify-content: center;
+    gap: 10px;
 
-    gap: 18px;
-    padding: 5px 10px;
-
-    justify-content: flex-start;
-  }
-
-  nav ul::-webkit-scrollbar {
-    display: none;
+    background: rgba(255,255,255,0.05);   /* 🔥 glass effect */
+    padding: 8px 12px;
+    border-radius: 40px;
   }
 
   nav li {
-    flex: 0 0 auto;
     font-size: 12px;
-    opacity: 0.8;
+    padding: 6px 10px;
+    opacity: 0.7;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+
+  nav li.active {
+    opacity: 1;
+    background: rgba(255,255,255,0.1);
+  }
+
+  nav li:hover {
+    opacity: 1;
   }
 
   /* HERO */
@@ -810,4 +819,7 @@ html {
     padding: 60px 20px;
   }
 
+}
+nav ul {
+  backdrop-filter: blur(20px);
 }
