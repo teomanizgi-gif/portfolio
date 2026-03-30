@@ -797,3 +797,27 @@ html {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 15px 15px;
+  }
+
+  nav ul {
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    padding-bottom: 5px;
+  }
+
+  nav ul::-webkit-scrollbar {
+    display: none; /* scroll bar gizle */
+  }
+
+  nav li {
+    flex: 0 0 auto;
+    font-size: 12px;
+  }
+
+}
