@@ -821,3 +821,38 @@ html {
   }
 
 }
+
+/* =========================
+   MOBILE NAV FIX ONLY
+   (desktop untouched)
+========================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 12px 15px;
+  }
+
+  nav ul {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    gap: 18px;
+    padding: 5px 10px;
+
+    justify-content: flex-start; /* ortalamıyoruz → daha doğal */
+  }
+
+  /* scroll bar gizle */
+  nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav li {
+    flex: 0 0 auto;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+}
