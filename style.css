@@ -726,11 +726,13 @@ html {
 
   nav ul {
     display: flex;
-    flex-wrap: wrap;                 /* ❌ scroll yok */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 
-    background: rgba(255,255,255,0.05);   /* 🔥 glass effect */
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px); /* ✅ sadece mobilde */
+
     padding: 8px 12px;
     border-radius: 40px;
   }
@@ -819,7 +821,4 @@ html {
     padding: 60px 20px;
   }
 
-}
-nav ul {
-  backdrop-filter: blur(20px);
 }
