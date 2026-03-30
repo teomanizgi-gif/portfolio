@@ -711,7 +711,7 @@ html {
 }
 
 /* =========================
-   MOBILE ONLY (SAFE OVERRIDE)
+   FINAL MOBILE (CLEAN & SAFE)
    desktop'a dokunmaz
 ========================= */
 
@@ -719,15 +719,28 @@ html {
 
   /* NAV */
   nav {
-    padding: 15px 20px;
+    padding: 12px 15px;
   }
 
   nav ul {
-    gap: 16px;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    gap: 18px;
+    padding: 5px 10px;
+
+    justify-content: flex-start;
+  }
+
+  nav ul::-webkit-scrollbar {
+    display: none;
   }
 
   nav li {
+    flex: 0 0 auto;
     font-size: 12px;
+    opacity: 0.8;
   }
 
   /* HERO */
@@ -774,10 +787,11 @@ html {
     font-size: 36px;
   }
 
-  /* ALL ROW SYSTEMS */
+  /* ROW SYSTEM */
   .row,
   .row-text,
-  .row-mix {
+  .row-mix,
+  .bayu-row-mix {
     grid-template-columns: 1fr !important;
   }
 
@@ -794,65 +808,6 @@ html {
   .projects,
   .furniture-projects {
     padding: 60px 20px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  nav {
-    padding: 15px 15px;
-  }
-
-  nav ul {
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 20px;
-    padding-bottom: 5px;
-  }
-
-  nav ul::-webkit-scrollbar {
-    display: none; /* scroll bar gizle */
-  }
-
-  nav li {
-    flex: 0 0 auto;
-    font-size: 12px;
-  }
-
-}
-
-/* =========================
-   MOBILE NAV FIX ONLY
-   (desktop untouched)
-========================= */
-
-@media (max-width: 768px) {
-
-  nav {
-    padding: 12px 15px;
-  }
-
-  nav ul {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-
-    gap: 18px;
-    padding: 5px 10px;
-
-    justify-content: flex-start; /* ortalamıyoruz → daha doğal */
-  }
-
-  /* scroll bar gizle */
-  nav ul::-webkit-scrollbar {
-    display: none;
-  }
-
-  nav li {
-    flex: 0 0 auto;
-    font-size: 12px;
-    opacity: 0.8;
   }
 
 }
