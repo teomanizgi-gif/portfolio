@@ -709,3 +709,91 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   MOBILE ONLY (SAFE OVERRIDE)
+   desktop'a dokunmaz
+========================= */
+
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+  nav li {
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr !important;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about-bottom {
+    text-align: center;
+  }
+
+  /* SKILLS */
+  .about-skills {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* PROJECT GRID */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FURNITURE */
+  .furniture-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .furniture-title h2 {
+    font-size: 36px;
+  }
+
+  /* ALL ROW SYSTEMS */
+  .row,
+  .row-text,
+  .row-mix {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* GLOBAL SPACING */
+  .projects,
+  .furniture-projects {
+    padding: 60px 20px;
+  }
+
+}
