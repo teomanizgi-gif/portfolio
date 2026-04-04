@@ -722,7 +722,6 @@ html {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  margin-left: auto; /* 🔥 sağa iter */
   z-index: 1100;
 }
 
