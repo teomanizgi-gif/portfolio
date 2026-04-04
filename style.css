@@ -918,20 +918,23 @@ html {
 
   /* UX DESIGN FIX */
   .uxdesign-page .furniture-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr !important; /* 🔥 override zorla */
+    justify-content: center;
   }
 
   .uxdesign-page .furniture-card {
-    max-width: 400px;
+    width: 100%;
+    max-width: 380px;
     margin: 0 auto;
   }
 
   .uxdesign-page .furniture-card img {
-    height: auto;
+    width: 100%;
+    height: auto !important;   /* 🔥 500px fix override */
     aspect-ratio: 4 / 5;
+    object-fit: cover;
   }
-
+  
   /* CONTACT */
   .contact-grid {
     grid-template-columns: 1fr;
