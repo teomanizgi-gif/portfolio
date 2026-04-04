@@ -877,10 +877,33 @@ html {
 }
 
 /* =========================
-   MOBILE CONTENT FIX
+   MOBILE CONTENT FIX + NAV FIX
 ========================= */
 
 @media (max-width: 768px) {
+
+  /* 🔥 NAVBAR FIX (LOGO KAYMA ÇÖZÜLDÜ) */
+  nav {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav.scrolled {
+    padding: 20px 20px !important; /* 🔥 scroll’da değişmesin */
+  }
+
+  .logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 30px;
+    width: auto;
+  }
 
   /* HERO */
   .hero-content h1 {
@@ -918,7 +941,7 @@ html {
 
   /* UX DESIGN FIX */
   .uxdesign-page .furniture-grid {
-    grid-template-columns: 1fr !important; /* 🔥 override zorla */
+    grid-template-columns: 1fr !important;
     justify-content: center;
   }
 
@@ -930,7 +953,7 @@ html {
 
   .uxdesign-page .furniture-card img {
     width: 100%;
-    height: auto !important;   /* 🔥 500px fix override */
+    height: auto !important;
     aspect-ratio: 4 / 5;
     object-fit: cover;
   }
