@@ -20,6 +20,7 @@ setInterval(() => {
 }, 4000);
 
 // FADE-IN ANIMATION
+// FADE-IN ANIMATION
 const faders = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver(entries => {
@@ -39,12 +40,20 @@ const hamburger = document.querySelector(".hamburger");
 if (hamburger) {
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
+
+    // menu aç/kapa
     nav.classList.toggle("open");
+
+    // 🔥 hamburger animasyonu
+    hamburger.classList.toggle("active");
   });
 
   document.addEventListener("click", (e) => {
     if (!nav.contains(e.target)) {
       nav.classList.remove("open");
+
+      // 🔥 hamburger geri dönsün
+      hamburger.classList.remove("active");
     }
   });
 }
