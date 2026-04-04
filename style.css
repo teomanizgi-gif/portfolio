@@ -877,27 +877,18 @@ html {
 }
 
 /* =========================
-   MOBILE CONTENT FIX + NAV FIX
+   MOBILE CONTENT FIX (SAFE)
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* 🔥 NAVBAR FIX (LOGO KAYMA ÇÖZÜLDÜ) */
-  nav {
-    padding: 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+  /* 🔥 SADECE LOGO FIX */
   nav.scrolled {
-    padding: 20px 20px !important; /* 🔥 scroll’da değişmesin */
+    padding: 15px 20px !important; /* desktop ile uyumlu */
   }
 
   .logo {
     flex-shrink: 0;
-    display: flex;
-    align-items: center;
   }
 
   .logo img {
@@ -939,50 +930,38 @@ html {
     grid-template-columns: 1fr;
   }
 
-  /* UX DESIGN FIX */
-  .uxdesign-page .furniture-grid {
-    grid-template-columns: 1fr !important;
-    justify-content: center;
-  }
-
-  .uxdesign-page .furniture-card {
-    width: 100%;
-    max-width: 380px;
-    margin: 0 auto;
-  }
-
+  /* UX DESIGN FIX (SADE) */
   .uxdesign-page .furniture-card img {
-    width: 100%;
     height: auto !important;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
   }
-  
+
   /* CONTACT */
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  /* ROW LAYOUTS */
+  /* ROW */
   .row,
   .row-text,
   .row-mix {
     grid-template-columns: 1fr;
   }
+
+  /* HAMBURGER ANIM */
   .hamburger span {
-  transition: 0.3s;
-}
+    transition: 0.3s;
+  }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(7px);
-}
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
 
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-7px);
-}
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
 
 }
