@@ -876,20 +876,6 @@ html {
   }
 }
 
-@media (min-width: 769px) {
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  nav ul {
-    margin-left: auto; /* 🔥 menüyü tekrar sağa iter */
-  }
-
-}
-
 /* =========================
    MOBILE CONTENT FIX (FINAL + UX)
 ========================= */
@@ -905,7 +891,6 @@ html {
     padding: 15px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     z-index: 1000;
   }
@@ -915,10 +900,11 @@ html {
     padding: 15px 20px !important;
   }
 
-  /* 🔥 LOGO SOLDAN SABİT */
+  /* 🔥 LOGO SOLDA */
   .logo {
     flex-shrink: 0;
-    margin: 0;
+    display: flex;
+    align-items: center;
   }
 
   .logo img {
@@ -927,10 +913,10 @@ html {
     display: block;
   }
 
-  /* 🔥 HAMBURGER SAĞDA SABİT */
+  /* 🔥 HAMBURGER SAĞDA */
   .hamburger {
-    position: relative;
     display: flex;
+    margin-left: auto; /* 🔥 kilit */
     z-index: 1100;
   }
 
@@ -968,7 +954,7 @@ html {
     grid-template-columns: 1fr;
   }
 
-  /* 🔥 UX DESIGN FIX (SIMPLE & CLEAN) */
+  /* 🔥 UX DESIGN FIX (KORUNDU) */
   .uxdesign-page .furniture-grid {
     grid-template-columns: 1fr !important;
   }
