@@ -898,7 +898,35 @@ html {
   }
 
 }
+/* =========================
+   UX DESIGN MOBILE FIX
+========================= */
 
+@media (max-width: 768px) {
+
+  /* 2 kolon → 1 kolon */
+  .uxdesign-page .furniture-grid {
+    grid-template-columns: 1fr !important;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* kart ortalansın */
+  .uxdesign-page .furniture-card {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  /* görsel düzgün oran */
+  .uxdesign-page .furniture-card img {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+}
 @media (min-width: 769px) {
 
   nav {
@@ -911,3 +939,5 @@ html {
   }
 
 }
+
+
