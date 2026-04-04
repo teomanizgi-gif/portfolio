@@ -711,22 +711,23 @@ html {
 }
 
 /* =========================
+  /* =========================
    MOBILE NAV
 ========================= */
 
 .hamburger {
   display: none;
 
-  position: absolute;   /* 🔥 EKLENDİ */
-  right: 20px;          /* 🔥 EKLENDİ */
-  top: 50%;             /* 🔥 EKLENDİ */
-  transform: translateY(-50%); /* 🔥 EKLENDİ */
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
 
-  z-index: 1100;        /* 🔥 EKLENDİ */
+  z-index: 1100;
 }
 
 .hamburger span {
@@ -745,10 +746,12 @@ html {
 
   nav ul {
     position: fixed;
-    top: 70px;
+    top: 0;                 /* 🔥 düzeltildi */
     right: -100%;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 100vh;          /* 🔥 düzeltildi */
+
+    display: flex;          /* 🔥 kritik eklendi */
 
     flex-direction: column;
     align-items: center;
@@ -761,7 +764,8 @@ html {
     transition: 0.4s;
   }
 
-  nav ul.active {
+  /* 🔥 JS ile uyumlu hale getirildi */
+  nav.open ul {
     right: 0;
   }
 
@@ -773,6 +777,11 @@ html {
     display: flex;
   }
 }
+
+/* =========================
+   MOBILE CONTENT FIX
+========================= */
+
 @media (max-width: 768px) {
 
   /* HERO */
