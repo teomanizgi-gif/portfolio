@@ -709,3 +709,59 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: white;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(20px);
+
+    transition: 0.4s;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav li {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
