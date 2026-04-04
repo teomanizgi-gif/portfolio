@@ -765,3 +765,52 @@ html {
     display: flex;
   }
 }
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 80px 20px;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-skills {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 60px 20px;
+  }
+
+  /* FURNITURE GRID */
+  .furniture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ROW LAYOUTS */
+  .row,
+  .row-text,
+  .row-mix {
+    grid-template-columns: 1fr;
+  }
+
+}
