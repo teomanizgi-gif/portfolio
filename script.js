@@ -31,3 +31,20 @@ const observer = new IntersectionObserver(entries => {
 });
 
 faders.forEach(el => observer.observe(el));
+
+const nav = document.querySelector("nav");
+const hamburger = document.querySelector(".hamburger");
+
+// toggle
+if (hamburger) {
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    nav.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target)) {
+      nav.classList.remove("open");
+    }
+  });
+}
