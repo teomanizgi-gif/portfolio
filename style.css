@@ -725,8 +725,8 @@ html {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    width: 24px;
-    height: 16px;
+    width: 20px;
+    height: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -768,6 +768,7 @@ html {
     transform: translateY(0) scale(1);
     pointer-events: auto;
   }
+  
 
   /* HAMBURGER ANIMATION */
 nav.open .hamburger span:nth-child(1) {
@@ -1399,6 +1400,9 @@ html {
 
 .logo:hover img {
   opacity:0.8;
+}
+.logo {
+  margin-right: auto;
 }
 
 /* =========================
