@@ -877,23 +877,47 @@ html {
 }
 
 /* =========================
-   MOBILE CONTENT FIX (SAFE)
+   MOBILE CONTENT FIX (FINAL + UX)
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* 🔥 SADECE LOGO FIX */
-  nav.scrolled {
-    padding: 15px 20px !important; /* desktop ile uyumlu */
+  /* 🔥 NAVBAR STABLE */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
   }
 
+  /* 🔥 SCROLL'DA OYNAMASIN */
+  nav.scrolled {
+    padding: 15px 20px !important;
+  }
+
+  /* 🔥 LOGO SOLDAN SABİT */
   .logo {
     flex-shrink: 0;
+    margin: 0;
   }
 
   .logo img {
     height: 30px;
     width: auto;
+    display: block;
+  }
+
+  /* 🔥 HAMBURGER SAĞDA SABİT */
+  .hamburger {
+    position: relative;
+    display: flex;
+    z-index: 1100;
   }
 
   /* HERO */
@@ -930,9 +954,21 @@ html {
     grid-template-columns: 1fr;
   }
 
-  /* UX DESIGN FIX (SADE) */
+  /* 🔥 UX DESIGN FIX (SIMPLE & CLEAN) */
+  .uxdesign-page .furniture-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .uxdesign-page .furniture-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
   .uxdesign-page .furniture-card img {
+    width: 100%;
     height: auto !important;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
   }
 
   /* CONTACT */
@@ -947,7 +983,7 @@ html {
     grid-template-columns: 1fr;
   }
 
-  /* HAMBURGER ANIM */
+  /* HAMBURGER ANIMATION */
   .hamburger span {
     transition: 0.3s;
   }
