@@ -709,37 +709,43 @@ html {
   }
 }
 /* =========================
-   FINAL MOBILE (HAMBURGER)
-   desktop'a dokunmaz
+   PREMIUM MOBILE MENU
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* NAV */
   nav {
     position: relative;
     padding: 15px 20px;
   }
 
-  /* HAMBURGER ICON */
-  nav::after {
-    content: "☰";
-    font-size: 22px;
+  /* HAMBURGER */
+  .hamburger {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    width: 28px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
-    padding: 10px; /* 🔥 hover alanı büyütüldü */
   }
 
-  /* MENU HIDDEN */
+  .hamburger span {
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* MENU */
   nav ul {
     position: absolute;
     top: 70px;
     right: 20px;
 
-    display: none;
     flex-direction: column;
     gap: 15px;
 
@@ -748,30 +754,43 @@ html {
 
     padding: 20px;
     border-radius: 12px;
+
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+    pointer-events: none;
+
+    transition: 0.3s ease;
   }
 
-  /* 🔥 SADECE HAMBURGER AÇAR */
-  nav::after:hover ~ ul,
-  nav ul:hover {
-    display: flex;
+  /* OPEN */
+  nav.open ul {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
   }
 
-  /* MENU ITEM */
+  /* HAMBURGER ANIMATION */
+  nav.open .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  nav.open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.open .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
   nav li {
     font-size: 14px;
     opacity: 0.8;
   }
 
-  nav li.active {
-    opacity: 1;
-  }
-
   nav li:hover {
     opacity: 1;
   }
-
 }
-
 body {
   font-family: 'Inter', sans-serif;
   background:#050505;
