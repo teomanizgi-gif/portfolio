@@ -716,9 +716,17 @@ html {
 
 .hamburger {
   display: none;
+
+  position: absolute;   /* 🔥 EKLENDİ */
+  right: 20px;          /* 🔥 EKLENDİ */
+  top: 50%;             /* 🔥 EKLENDİ */
+  transform: translateY(-50%); /* 🔥 EKLENDİ */
+
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+
+  z-index: 1100;        /* 🔥 EKLENDİ */
 }
 
 .hamburger span {
