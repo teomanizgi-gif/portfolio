@@ -898,3 +898,16 @@ html {
   }
 
 }
+
+@media (min-width: 769px) {
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    margin-left: auto; /* 🔥 KİLİT SATIR */
+  }
+
+}
