@@ -708,7 +708,6 @@ html {
     grid-template-columns: 1fr;
   }
 }
-
 /* =========================
    FINAL MOBILE (HAMBURGER)
    desktop'a dokunmaz
@@ -731,6 +730,7 @@ html {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    padding: 10px; /* 🔥 hover alanı büyütüldü */
   }
 
   /* MENU HIDDEN */
@@ -750,7 +750,27 @@ html {
     border-radius: 12px;
   }
 
-  * { margin:0; padding:0; box-sizing:border-box; }
+  /* 🔥 SADECE HAMBURGER AÇAR */
+  nav::after:hover ~ ul,
+  nav ul:hover {
+    display: flex;
+  }
+
+  /* MENU ITEM */
+  nav li {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  nav li.active {
+    opacity: 1;
+  }
+
+  nav li:hover {
+    opacity: 1;
+  }
+
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -1503,9 +1523,7 @@ html {
   }
 
   /* OPEN MENU */
-  nav:hover ul {
-    display: flex;
-  }
+
 
   nav li {
     font-size: 14px;
