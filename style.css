@@ -771,37 +771,44 @@ html {
   /* 🔥 HAMBURGER */
   .hamburger {
     display: flex;
+      margin-left: auto; /* 🔥 bunu koy */
+      position: relative; /* ya da hiç yazma */
+
+
   }
 
   /* 🔥 DROPDOWN MENU */
-  nav ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
+ nav ul {
+  position: absolute;
+  top: 100%;
+  right: 20px;   /* 🔥 hamburger hizası */
+  width: auto;   /* 🔥 full width kaldırıldı */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 🔥 sola hizalı */
 
-    background: rgba(0,0,0,0.95);
-    backdrop-filter: blur(20px);
+  gap: 15px;
 
-    padding: 20px 0;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(20px);
 
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
+  padding: 15px 20px;
+  border-radius: 12px; /* 🔥 kutu hissi */
 
-    transition: 0.3s;
-  }
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
 
-  nav.open ul {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
+  transition: 0.3s;
+}
+
+/* açık hali */
+nav.open ul {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
 
   nav li {
     font-size: 18px;
@@ -881,52 +888,25 @@ html {
      HAMBURGER ANIMATION
   ========================= */
 
-  .hamburger span {
-    transition: 0.3s;
-  }
+.hamburger span {
+  transition: 0.3s;
+  transform-origin: center; /* 🔥 kritik */
+}
 
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
-  }
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
 
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
 
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
-  }
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 }
-/* =========================
-   UX DESIGN MOBILE FIX
-========================= */
 
-@media (max-width: 768px) {
-
-  /* 2 kolon → 1 kolon */
-  .uxdesign-page .furniture-grid {
-    grid-template-columns: 1fr !important;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  /* kart ortalansın */
-  .uxdesign-page .furniture-card {
-    width: 100%;
-    max-width: 380px;
-    margin: 0 auto;
-  }
-
-  /* görsel düzgün oran */
-  .uxdesign-page .furniture-card img {
-    width: 100%;
-    height: auto !important;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-  }
-
-}
 @media (min-width: 769px) {
 
   nav {
