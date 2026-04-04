@@ -702,11 +702,56 @@ html {
   width: 100%;
   height: auto;
 }
+/* MOBILE */
+@media (max-width: 768px) {
+  .zaltra-row-mix {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   BAYU PAGE FIX
+========================= */
+
+.bayu-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+}
+
+.bayu-row {
+  margin-bottom: 80px;
+}
+
+.bayu-row-full-text {
+  display: block;
+}
+
+.bayu-row-full-text .box {
+  width: 100%;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.bayu-row-mix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.bayu-row-full img {
+  width: 100%;
+  height: auto;
+}
+
 /* =========================
    MOBILE (CLEAN & STABLE)
 ========================= */
 
-/* BAYU FIX */
 @media (max-width: 768px) {
   .bayu-row-mix {
     grid-template-columns: 1fr;
@@ -738,7 +783,6 @@ html {
 
 @media (max-width: 768px) {
 
-  /* 🔥 NAVBAR */
   nav {
     position: fixed;
     top: 0;
@@ -747,7 +791,7 @@ html {
     padding: 15px 20px;
     display: flex;
     align-items: center;
-  justify-content: space-between; /* 🔥 EKLE */
+    justify-content: space-between;
 
     z-index: 1000;
   }
@@ -756,7 +800,6 @@ html {
     padding: 15px 20px !important;
   }
 
-  /* 🔥 LOGO */
   .logo {
     display: flex;
     align-items: center;
@@ -768,57 +811,46 @@ html {
     width: auto;
   }
 
-  /* 🔥 HAMBURGER */
   .hamburger {
     display: flex;
-      margin-left: auto; /* 🔥 bunu koy */
-      position: relative; /* ya da hiç yazma */
-
-
+    position: relative;
   }
 
-  /* 🔥 DROPDOWN MENU */
- nav ul {
-  position: absolute;
-  top: 100%;
-  right: 20px;   /* 🔥 hamburger hizası */
-  width: auto;   /* 🔥 full width kaldırıldı */
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: auto;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* 🔥 sola hizalı */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-  gap: 15px;
+    gap: 15px;
 
-  background: rgba(0,0,0,0.95);
-  backdrop-filter: blur(20px);
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(20px);
 
-  padding: 15px 20px;
-  border-radius: 12px; /* 🔥 kutu hissi */
+    padding: 15px 20px;
+    border-radius: 12px;
 
-  transform: translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
 
-  transition: 0.3s;
-}
+    transition: 0.3s;
+  }
 
-/* açık hali */
-nav.open ul {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
+  nav.open ul {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   nav li {
     font-size: 18px;
   }
 
-  /* =========================
-     CONTENT
-  ========================= */
-
-  /* HERO */
   .hero-content h1 {
     font-size: 36px;
     letter-spacing: 2px;
@@ -828,7 +860,6 @@ nav.open ul {
     font-size: 14px;
   }
 
-  /* ABOUT */
   .about {
     padding: 80px 20px;
   }
@@ -842,19 +873,13 @@ nav.open ul {
     grid-template-columns: 1fr;
   }
 
-  /* PROJECTS */
   .projects {
     padding: 60px 20px;
   }
 
-  /* FURNITURE GRID */
   .furniture-grid {
     grid-template-columns: 1fr;
   }
-
-  /* =========================
-     UX FIX (KORUNDU)
-  ========================= */
 
   .uxdesign-page .furniture-grid {
     grid-template-columns: 1fr !important;
@@ -872,40 +897,34 @@ nav.open ul {
     object-fit: cover;
   }
 
-  /* CONTACT */
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  /* ROW */
   .row,
   .row-text,
   .row-mix {
     grid-template-columns: 1fr;
   }
 
-  /* =========================
-     HAMBURGER ANIMATION
-  ========================= */
+  .hamburger span {
+    transition: 0.3s;
+    transform-origin: center;
+  }
 
-.hamburger span {
-  transition: 0.3s;
-  transform-origin: center; /* 🔥 kritik */
-}
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
 
-.hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-   h1 {
+  h1 {
     font-size: 32px;
     line-height: 1.2;
   }
@@ -923,8 +942,6 @@ nav.open ul {
     font-size: 14px;
     line-height: 1.6;
   }
-
-}
 
 }
 
