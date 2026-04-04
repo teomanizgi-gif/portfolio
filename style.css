@@ -702,8 +702,11 @@ html {
   width: 100%;
   height: auto;
 }
+/* =========================
+   MOBILE (CLEAN & STABLE)
+========================= */
 
-/* MOBILE */
+/* BAYU FIX */
 @media (max-width: 768px) {
   .bayu-row-mix {
     grid-template-columns: 1fr;
@@ -711,21 +714,15 @@ html {
 }
 
 /* =========================
-   MOBILE NAV
+   HAMBURGER BASE
 ========================= */
 
 .hamburger {
   display: none;
-
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-
+  margin-left: auto; /* 🔥 sağa iter */
   z-index: 1100;
 }
 
@@ -736,153 +733,13 @@ html {
   display: block;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-
-  nav {
-    padding: 15px 20px;
-    position: relative; /* 🔥 dropdown için gerekli */
-  }
-
-  nav ul {
-    position: absolute;   /* 🔥 fixed → absolute */
-    top: 100%;            /* 🔥 navbar altından başlasın */
-    right: 0;
-    width: 100%;
-
-    height: auto;         /* 🔥 full ekran değil */
-
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    background: rgba(0,0,0,0.95);
-    backdrop-filter: blur(20px);
-
-    padding: 20px 0;
-
-    /* animasyon */
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-
-    transition: 0.3s;
-  }
-
-  /* 🔥 JS ile uyumlu */
-  nav.open ul {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  nav li {
-    font-size: 18px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
 /* =========================
-   MOBILE NAV + LOGO FIX
-========================= */
-
-.hamburger {
-  display: none;
-
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-
-  z-index: 1100;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 2px;
-  background: white;
-  display: block;
-}
-
-/* LOGO SABİT */
-.logo {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1100;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  nav {
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-  }
-
-  /* DROPDOWN MENU */
-  nav ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-
-    height: auto;
-
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    background: rgba(0,0,0,0.95);
-    backdrop-filter: blur(20px);
-
-    padding: 20px 0;
-
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-
-    transition: 0.3s;
-  }
-
-  /* JS UYUMLU */
-  nav.open ul {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  nav li {
-    font-size: 18px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* =========================
-   MOBILE CONTENT FIX (FINAL + UX)
+   MOBILE LAYOUT
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* 🔥 NAVBAR STABLE */
+  /* 🔥 NAVBAR */
   nav {
     position: fixed;
     top: 0;
@@ -895,30 +752,64 @@ html {
     z-index: 1000;
   }
 
-  /* 🔥 SCROLL'DA OYNAMASIN */
   nav.scrolled {
     padding: 15px 20px !important;
   }
 
-  /* 🔥 LOGO SOLDA */
+  /* 🔥 LOGO */
   .logo {
-    flex-shrink: 0;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
   }
 
   .logo img {
     height: 30px;
     width: auto;
-    display: block;
   }
 
-  /* 🔥 HAMBURGER SAĞDA */
+  /* 🔥 HAMBURGER */
   .hamburger {
     display: flex;
-    margin-left: auto; /* 🔥 kilit */
-    z-index: 1100;
   }
+
+  /* 🔥 DROPDOWN MENU */
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(20px);
+
+    padding: 20px 0;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s;
+  }
+
+  nav.open ul {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  nav li {
+    font-size: 18px;
+  }
+
+  /* =========================
+     CONTENT
+  ========================= */
 
   /* HERO */
   .hero-content h1 {
@@ -954,7 +845,10 @@ html {
     grid-template-columns: 1fr;
   }
 
-  /* 🔥 UX DESIGN FIX (KORUNDU) */
+  /* =========================
+     UX FIX (KORUNDU)
+  ========================= */
+
   .uxdesign-page .furniture-grid {
     grid-template-columns: 1fr !important;
   }
@@ -983,7 +877,10 @@ html {
     grid-template-columns: 1fr;
   }
 
-  /* HAMBURGER ANIMATION */
+  /* =========================
+     HAMBURGER ANIMATION
+  ========================= */
+
   .hamburger span {
     transition: 0.3s;
   }
