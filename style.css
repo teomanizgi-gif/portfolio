@@ -725,20 +725,20 @@ html {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    width: 28px;
-    height: 20px;
+    width: 24px;
+    height: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
   }
 
-  .hamburger span {
-    height: 2px;
-    background: #fff;
-    border-radius: 2px;
-    transition: 0.3s;
-  }
+.hamburger span {
+  height: 2px;   /* ince ve şık */
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
 
   /* MENU */
   nav ul {
@@ -770,17 +770,17 @@ html {
   }
 
   /* HAMBURGER ANIMATION */
-  nav.open .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
+nav.open .hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
 
-  nav.open .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
+nav.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
 
-  nav.open .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
+nav.open .hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
   nav li {
     font-size: 14px;
