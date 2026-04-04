@@ -876,6 +876,20 @@ html {
   }
 }
 
+@media (min-width: 769px) {
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    margin-left: auto; /* 🔥 menüyü tekrar sağa iter */
+  }
+
+}
+
 /* =========================
    MOBILE CONTENT FIX (FINAL + UX)
 ========================= */
