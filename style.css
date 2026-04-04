@@ -722,11 +722,11 @@ html {
   /* HAMBURGER */
   .hamburger {
     position: absolute;
-    right: 20px;
+    right: 24px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
-    height: 12px;
+    height: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
