@@ -388,6 +388,8 @@ nav li.active {
 
 nav li.active::after {
   width:100%;
+
+  
 }
 
 /* =========================
@@ -810,13 +812,14 @@ html {
     height: 30px;
     width: auto;
   }
-
   .hamburger {
     display: flex;
-    position: relative;
-      margin-left: auto; /* 🔥 bunu ekle */
-
+    position: absolute;  /* 🔥 kesin çözüm */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
+
 
   nav ul {
     position: absolute;
