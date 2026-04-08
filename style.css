@@ -950,6 +950,13 @@ html {
 
 }
 
+@media (max-width: 768px) {
+
+
+  h2 { font-size: 32px !important; }
+
+
+}
 @media (min-width: 769px) {
 
   nav {
